@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela com Escopo</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .bcc{
+            background-color: lightslategray;
+            color: white;
+        }
+
+        .bcc1 {
+            background-color: lightslategray;
+            color: white;
+            text-align: left;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="bcc" rowspan="2" scope="col">Área</th>
+                <th class="bcc" rowspan="2" scope="col">Disciplinas</th>
+                <th class="bcc" colspan="2" scope="colgroup">Notas</th>
+                <th class="bcc" rowspan="2"scope="col">Média</th>
+            </tr>
+            <tr>
+                <th class="bcc" scope="colgroup">Nota 1</th>
+                <th class="bcc" scope="colgroup">Nota 2</th>
+            </tr>  
+        </thead>
+        
+        <tbody>
+            <tr>
+                <th rowspan="4" scope="col">Exatas</th>
+                <td>Matemática</td>
+                <td>1.0</td>
+                <td>2.0</td>
+                <td>3.0</td>
+            </tr>
+
+            <tr>
+                
+                <td>Física</td>
+                <td>4.0</td>
+                <td>5.0</td>
+                <td>6.0</td>
+            </tr>
+
+            <tr>
+                
+                <td>Quimica</td>
+                <td>7.0</td>
+                <td>8.0</td>
+                <td>9.0</td>
+            </tr>
+
+            <tr>
+                
+                <td>Biologia</td>
+                <td>10.0</td>
+                <td>11.0</td>
+                <td>12.0</td>
+            </tr>
+          
+
+            </tr>
+
+            <tr>
+                <th class="bcc1" colspan="4" scope="row">Média de Exatas</th>
+                <td class="bcc">50.00</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2" scope="col">Humanas</th>
+                <td>História</td>
+                <td>1.0</td>
+                <td>2.0</td>
+                <td>3.0</td>
+            </tr>
+
+            <tr>
+                
+                <td>Geografia</td>
+                <td>4.0</td>
+                <td>5.0</td>
+                <td>6.0</td>
+
+                <tr>
+                    <th class="bcc1" colspan="4" scope="row">Média de Exatas</th>
+                    <td class="bcc">30.00</td>
+                </tr>
+
+            
+
+            
+        </tbody>
+    </table>
+</body>
+</html>
